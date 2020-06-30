@@ -292,7 +292,7 @@ vertical-align 속성은 테이블 요소(th, td) 내부에서 텍스트의 수�
 `right`: 오른쪽에 부유하는 블록 박스를 생성. 페이지 내용은 박스 왼쪽에 위치하며 위에서 아래로 흐름. 이후 요소에 clear 속성이 있으면 페이지 흐름이 달라짐. none 이 아니라면 display 속성은 무시된다.
 
 `none` - 요소를 부유시키지 않음
-
+. .
 - column
 
 column-count 속성
