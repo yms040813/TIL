@@ -60,6 +60,89 @@ Dark green: #28b485
   border-radius: 30px;
   margin-top: 5rem;
 }
+.first{
+  padding: 20rem 0;
+  margin-top: -20vh;
+}
+.first-text{
+  margin-bottom: 5rem ;
+  text-align: center ;
+}
+.first-h2{
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: .2rem;
+}
+.row{
+  max-width: 50rem;
+  padding: 0 3rem;
+  margin : 0 auto;
+  text-align: left;
+}
+.first-box{
+  margin-right: 0;
+  margin-bottom: 6rem;
+  width: 100%;
+  
+}
+.first-line{
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.paragraph{
+  margin-bottom: 3rem;
+  font-size: 1.6rem;
+  
+}
+.learn{
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: blue;
+  padding: 3px;
+  transition: all .2s;
+  border-bottom: 1px solid blue;
+}
+.first-img{
+  margin-bottom: 6rem;
+  width: 100%;
+  
+}
+.col-1-of-4{
+  margin-right: 0;
+  margin-top: 0rem;
+  margin-bottom: 6rem;
+  width: 200px !important;
+  height: 200px !important;
+  
+}
+.feature-box{
+  padding: 2rem;
+  background-color: rgba(25, 206, 25, 0.8);
+  font-size: 1.5rem;
+  text-align: center;
+  text-align: center;
+  
+}
+.heading-tertiary u-margin-bottom-small{
+  margin-bottom: 1.5rem !important;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.feature-box__text{
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
 *,
 *::after,
 *::before {
@@ -123,6 +206,7 @@ body {
 
 /* footer 예시 */
 .footer {
+  margin-top: 100rem;
   background-color: #333;
   padding: 10rem 0;
   font-size: 1.4rem;
