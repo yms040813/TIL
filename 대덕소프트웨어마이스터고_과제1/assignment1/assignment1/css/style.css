@@ -61,8 +61,10 @@ Dark green: #28b485
   margin-top: 5rem;
 }
 .first{
-  padding: 20rem 0;
-  margin-top: -20vh;
+
+  height: 95vh;
+
+  
 }
 .first-text{
   margin-bottom: 5rem ;
@@ -89,11 +91,12 @@ Dark green: #28b485
   margin-bottom: 1.5rem;
   font-size: 1.6rem;
   font-weight: 700;
-  text-transform: uppercase;
+  
 }
 .paragraph{
   margin-bottom: 3rem;
   font-size: 1.6rem;
+  
   
 }
 .learn{
@@ -104,41 +107,88 @@ Dark green: #28b485
   transition: all .2s;
   border-bottom: 1px solid blue;
 }
-.first-img{
+.all{
   display: flex;
-  flex-direction: row;
-  margin-bottom: 6rem;
+  justify-content: space-around;
+}
+
+.second{
+  height: 95vh;
+  
+}
+
+.first-img{
+  position: relative;
+  top: 5px;
   width: 300px;
   
 }
-.col-1-of-4{
-  margin-right: 0;
-  margin-top: 0rem;
-  margin-bottom: 6rem;
-  width: 300px !important;
-  height: 200px !important;
+
+.second-img{
+  position: relative;
+  left: 250px;
+  bottom: 100px;
+  width: 300px;
   
 }
-.feature-box{
+.third-img{
+  position: relative;
+  bottom: 250px;
+  left: 50px;
+  width: 300px;
+  
+}
+.col-1{
+  display: flex;
+  justify-content: space-around;
+  margin-right: 3rem;
+  margin-bottom: 6rem;
+  width: 300px !important;
+  height: 300px !important;
+  opacity: 0.7;
+  margin-top: 30rem;
+  
+  
+}
+.second-box{
+  margin-bottom: -5rem;
   padding: 2rem;
-  background-color: rgba(25, 206, 25, 0.8);
+  background-color: white;
   font-size: 1.5rem;
   text-align: center;
   text-align: center;
   
 }
-.heading-tertiary u-margin-bottom-small{
+.second-text u-margin-bottom-small{
+  
   margin-bottom: 1.5rem !important;
   font-size: 1.6rem;
   font-weight: 700;
   
+  
 }
-.feature-box__text{
+.second-box-text{
+  margin-top: 2rem;
   font-size: 1.5rem;
   text-align: center;
 }
-
-
+.apple{
+  width: 40%;
+}
+.third{
+  height: 95vh;
+}
+.discover-2{
+  cursor: pointer;
+  padding: 15px 40px;
+  background-color: greenyellow;
+  border: none;
+  border-radius: 30px;
+  margin-top: 5rem;
+  text-align: center;
+  margin-left: 830px;
+  
+}
 
 
 
@@ -170,6 +220,19 @@ Dark green: #28b485
 html {
   /* font-size: 10px; */
   font-size: 62.5%;
+  
+}
+.second{
+  height: 135vh;
+  clip-path: polygon( 0 15vh, 100% 0, 100% 95vh, 0 100%);
+  background-image: linear-gradient(
+   to right bottom,
+   rgba(255, 144, 144, 0.8),
+   rgba(88, 255, 82, 0.8)
+ );
+background-size: cover;
+/* image가 화면크기에 따라서 어떻게 줄어드는지 보여준다. 그때 기준 (top, bottom, center) */
+
 }
 /*
   Responsive 제작시 작업순서
@@ -193,14 +256,28 @@ html {
 /* body
  * font-family : 사이트 전체 폰트 설정 
  */
+ main{
+   height: 95vh;
+   background-image: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8)
+    rgba(255, 255, 255, 0.8)
+  )
+background-size: cover;
+/* image가 화면크기에 따라서 어떻게 줄어드는지 보여준다. 그때 기준 (top, bottom, center) */
+clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+ }
 body {
+  
+  display: flex;
+  flex-direction: column;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
-
-
   box-sizing: border-box;
 }
 
@@ -208,7 +285,7 @@ body {
 
 /* footer 예시 */
 .footer {
-  margin-top: 100rem;
+  margin-top: 10rem;
   background-color: #333;
   padding: 10rem 0;
   font-size: 1.4rem;
