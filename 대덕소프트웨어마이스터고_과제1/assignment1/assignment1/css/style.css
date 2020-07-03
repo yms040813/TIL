@@ -71,9 +71,15 @@ li { list-style: none }
   text-align: center ;
 }
 .first-h2{
-  font-size: 3rem;
-  font-weight: 700;
-  letter-spacing: .2rem;
+  font-size: 35px;
+  text-align: center;
+  margin-top:40px;
+  margin-bottom: 40px;
+  color:greenyellow;
+  letter-spacing:0.2rem;
+  background: linear-gradient(to right, greenyellow, green);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .row{
   max-width: 50rem;
