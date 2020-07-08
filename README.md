@@ -319,3 +319,299 @@ column-rule-color 속성은 칼럼 사이에 들어갈 라인의 색상을 설�
 column-rule 속성
 모든 columns-rule 속성을 이용한 스타일을 한 줄에 설정할 수 있습니다.-6/26 css
 
+
+
+
+
+
+
+
+자바 스크립트 공부할것
+let,var,const,dom,배열메소드,객체,호이스팅
+
+변수 선언 방식(var,let,const)
+
+정리: 변수선언에는 기본적으로 const를 사용하고 재할당이 필요한 경우만 let을 사용하는것이 좋다.
+
+우선, var는 변수 선언 방식에 있어서 큰 단점을 가지고 있다.
+
+    var name = 'bathingape'
+    console.log(name) // bathingape
+
+    var name = 'javascript'
+    console.log(name) // javascript
+변수를 한 번 더 선언했음에도 불구하고, 에러가 나오지 않고 각기 다른 값이 출력되는 것을 볼 수 있다.
+
+이는 유연한 변수 선언으로 간단한 테스트에는 편리 할 수 있겠으나, 코드량이 많아 진다면 어디에서 어떻게 사용 될지도 파악하기 힘들뿐더러 값이 바뀔 우려가 있다.
+
+그래서 ES6 이후, 이를 보완하기 위해 추가 된 변수 선언 방식이 let 과 const 이다.
+
+위의 코드에서 변수 선언 방식만 바꿔보자.
+
+    let name = 'bathingape'
+    console.log(name) // bathingape
+
+    let name = 'javascript'
+    console.log(name) 
+    // Uncaught SyntaxError: Identifier 'name' has already been declared
+name이 이미 선언 되었다는 에러 메세지가 나온다. (const도 마찬가지)
+
+변수 재선언이 되지 않는다.
+
+그렇다면 let 과 const 의 차이점은 무엇일까?
+
+이 둘의 차이점은 immutable 여부이다.
+
+let 은 변수에 재할당이 가능하다. 그렇지만,
+
+    let name = 'bathingape'
+    console.log(name) // bathingape
+
+    let name = 'javascript'
+    console.log(name) 
+    // Uncaught SyntaxError: Identifier 'name' has already been declared
+
+    name = 'react'
+    console.log(name) //react
+const는 변수 재선언, 변수 재할당 모두 불가능하다.
+
+    const name = 'bathingape'
+    console.log(name) // bathingape
+
+    const name = 'javascript'
+    console.log(name) 
+    // Uncaught SyntaxError: Identifier 'name' has already been declared
+
+    name = 'react'
+    console.log(name) 
+    //Uncaught TypeError: Assignment to constant 
+    variable.
+
+
+
+
+
+
+호이스팅
+호이스팅(Hoisting)이란, var 선언문이나 function 선언문 등을 해당 스코프의 선두로 옮긴 것처럼 동작하는 특성을 말한다.
+
+자바스크립트는 ES6에서 도입된 let, const를 포함하여 모든 선언(var, let, const, function, function*, class)을 호이스팅한다.
+
+하지만, var 로 선언된 변수와는 달리 let 로 선언된 변수를 선언문 이전에 참조하면 참조 에러(ReferenceError)가 발생한다.
+
+	console.log(foo); // undefined
+	var foo;
+
+	console.log(bar); // Error: Uncaught ReferenceError: bar is not defined
+	let bar;
+이는 let 로 선언된 변수는 스코프의 시작에서 변수의 선언까지 일시적 사각지대(Temporal Dead Zone; TDZ)에 빠지기 때문이다.
+
+참고로, 변수는 선언 단계 > 초기화 단계 > 할당 단계 에 걸쳐 생성되는데
+
+var 으로 선언된 변수는 선언 단계와 초기화 단계가 한번에 이루어진다. 하지만,
+
+// 스코프의 선두에서 선언 단계와 초기화 단계가 실행된다.
+// 따라서 변수 선언문 이전에 변수를 참조할 수 있다.
+
+console.log(foo); // undefined
+
+var foo;
+console.log(foo); // undefined
+
+foo = 1; // 할당문에서 할당 단계가 실행된다.
+console.log(foo); // 1
+let 로 선언된 변수는 선언 단계와 초기화 단계가 분리되어 진행된다.
+
+// 스코프의 선두에서 선언 단계가 실행된다.
+// 아직 변수가 초기화(메모리 공간 확보와 undefined로 초기화)되지 않았다.
+// 따라서 변수 선언문 이전에 변수를 참조할 수 없다.
+
+console.log(foo); // ReferenceError: foo is not defined
+
+let foo; // 변수 선언문에서 초기화 단계가 실행된다.
+console.log(foo); // undefined
+
+foo = 1; // 할당문에서 할당 단계가 실행된다.
+console.log(foo); // 1
+
+
+
+
+
+
+
+
+
+DOM의 개념
+문서 객체 모델(DOM)이란?
+문서 객체 모델(DOM, Document Object Model)은 XML이나 HTML 문서에 접근하기 위한 일종의 인터페이스입니다.
+
+이 객체 모델은 문서 내의 모든 요소를 정의하고, 각각의 요소에 접근하는 방법을 제공합니다.
+
+ 
+
+이러한 DOM은 W3C의 표준 객체 모델이며, 다음과 같이 계층 구조로 표현됩니다.
+
+ 
+
+Document- html - body - p - text
+            I         - a - href
+            I           I - text
+            I - - head - title - text
+            
+
+ 
+
+자바스크립트는 이러한 객체 모델을 이용하여 다음과 같은 작업을 할 수 있습니다.
+
+ 
+
+- 자바스크립트는 새로운 HTML 요소나 속성을 추가할 수 있습니다.
+
+- 자바스크립트는 존재하는 HTML 요소나 속성을 제거할 수 있습니다.
+
+- 자바스크립트는 HTML 문서의 모든 HTML 요소를 변경할 수 있습니다.
+
+- 자바스크립트는 HTML 문서의 모든 HTML 속성을 변경할 수 있습니다.
+
+- 자바스크립트는 HTML 문서의 모든 CSS 스타일을 변경할 수 있습니다.
+
+- 자바스크립트는 HTML 문서에 새로운 HTML 이벤트를 추가할 수 있습니다.
+
+- 자바스크립트는 HTML 문서의 모든 HTML 이벤트에 반응할 수 있습니다.
+
+
+
+
+DOM의 종류
+W3C DOM 표준은 세 가지 모델로 구분됩니다.
+
+ Document
+
+1. Core DOM : 모든 문서 타입을 위한 DOM 모델
+
+2. HTML DOM : HTML 문서를 위한 DOM 모델
+
+3. XML DOM : XML 문서를 위한 DOM 모델
+
+HTML DOM
+HTML DOM은 HTML 문서를 조작하고 접근하는 표준화된 방법을 정의합니다.
+
+모든 HTML 요소는 HTML DOM를 통해 접근할 수 있습니다.
+
+XML DOM
+XML DOM은 XML 문서에 접근하여, 그 문서를 다루는 표준화된 방법을 정의합니다.
+
+모든 XML 요소는 XML DOM를 통해 접근할 수 있습니다.
+
+
+
+
+
+
+배열 객체 메소드
+Array 객체가 갖고 있는 메소드들에 대해 알아봅니다.
+함수들을 이용하여 배열을 효과적으로 사용할 수 있습니다.
+ 
+
+
+내장 메소드들
+concat()
+인자로 주어진 배열이나 값들을 기존 배열에 합쳐서 새 배열을 반환합니다.
+ 
+copyWithin()
+배열의 일부를 얕게 복사한 뒤, 동일한 배열의 다른 위치에 덮어쓰고 그 배열을 반환합니다.
+ 
+entries()
+배열의 각 인덱스에 대한 키/값 쌍을 가지는 새로운 배열 반복자 객체를 반환합니다.
+ 
+every()
+배열 안의 모든 요소가 주어진 판별 함수를 통과하는지 테스트합니다.
+만약 배열의 모든 요소가 제공된 판별 함수를 통과하면 true를 반환합니다.
+ 
+fill()
+배열의 시작 인덱스부터 끝 인덱스의 이전까지 정적인 값 하나로 채웁니다.
+ 
+filter()
+주어진 함수의 테스트를 통과하는(결과가 참인 경우의) 요소들을 모아 새로운 배열을 생성하여 반환합니다.
+ 
+find()
+주어진 판별 함수를 만족하는 첫 번째 요소의 값을 반환합니다.
+그러한 요소가 없다면 undefined를 반환합니다.
+ 
+findIndex()
+주어진 판별 함수를 만족하는 배열의 첫 번째 요소에 대한 인덱스를 반환합니다.
+만족하는 요소가 없으면 -1을 반환합니다.
+ 
+forEach()
+주어진 함수를 배열 요소 각각에 대해 실행합니다.
+ 
+includes()
+배열에 특정 요소가 포함돼있는지 알아내어 true 또는 false를 반환합니다.
+ 
+indexOf()
+배열에서 지정한 값과 같은 요소의 첫 인덱스를 반환합니다.
+없으면 -1을 반환합니다.
+ 
+join()
+배열의 모든 요소를 문자열로 변환하여 합칩니다.
+ 
+keys()
+배열의 각 인덱스를 키 값으로 가지는 새로운 배열 반복자 객체를 반환합니다.
+ 
+lastIndexOf()
+지정된 요소가 배열에서 발견될 수 있는 마지막 인덱스를 반환하고, 존재하지 않으면 -1을 반환합니다.
+ 
+map()
+배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출하고, 그 결과를 모아서 만든 새로운 배열을 반환합니다.
+ 
+pop()
+배열에서 마지막 요소를 제거하고 그 요소를 반환합니다.
+ 
+push()
+배열의 끝에 하나 이상의 요소를 추가하고, 배열의 새로운 길이를 반환합니다.
+ 
+reduce()
+배열의 각 요소에 대해 주어진 함수(reducer 함수)를 적용하여 하나의 값으로 줄입니다.
+왼쪽에서 오른쪽 방향으로 적용합니다.
+ 
+reduceRight()
+배열의 각 요소에 대해 주어진 함수를 적용하여 하나의 값으로 줄입니다.
+오른쪽에서 왼쪽 방향으로 적용합니다.
+ 
+reverse()
+배열의 요소 순서를 반전시킵니다.
+ 
+shift()
+배열에서 첫 번째 요소를 제거하고, 제거된 요소를 반환합니다.
+ 
+slice()
+배열의 일부를 추출한 새 배열을 반환합니다.
+원본 배열은 수정되지 않습니다.
+ 
+some()
+배열 안의 어떤 하나의 요소라도 주어진 함수를 통과하는지 테스트하고 만족한다면 true를 반환합니다.
+ 
+sort()
+배열의 요소를 적절한 위치에 정렬한 후 그 배열을 반환합니다.
+기본 정렬 순서는 유니코드 코드 포인트를 따릅니다.
+ 
+splice()
+배열의 기존 요소를 삭제 또는 교체하거나 새 요소를 추가하여 배열의 내용을 변경합니다.
+ 
+toLocaleString()
+배열의 요소를 나타내는 지역화된 문자열을 반환합니다.
+ 
+toString()
+배열과 요소를 나타내는 문자열을 반환합니다.
+ 
+unshift()
+새로운 요소를 배열의 맨 앞쪽에 추가하고, 새로운 길이를 반환합니다.
+ 
+values()
+배열의 각 인덱스에 대한 값을 가지는 새로운 배열 반복자 객체를 반환합니다.
+ 
+ 
+
+ 
+
