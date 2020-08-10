@@ -1,314 +1,52 @@
+
 <!DOCTYPE html>
-<html style="font-size: 10px; ">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Youtube</title>
-    <style>
-#high{
-    height: 40px;
-    padding: 0 16px;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-between;
-}
-#start{
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    
-}
-#guide-button{
-    margin: 0 16px 0 0;
-    width: 40px;
-    height: 40px;
-    color: #606060;
-    padding: 8px;
-    box-sizing: border-box;
-    font-size: 0;
-}
-.button{
-    vertical-align: middle;
-    color: inherit;
-    outline: none;
-    background: none;
-    margin: 0;
-    border: none;
-    padding: 0;
-    line-height: 0;
-    cursor: pointer;
-    margin: 5px;
-    width: 10px;
-    height: 10px;
-    
-}
-.guide-icon{
-    margin: 5px;
-    width: 20px;
-    height: 20px;
-}
-.logo{
-    padding: 0;
-    align-items: center;
-    align-self: center;
-    cursor: pointer;
-    text-decoration: none;
-}
-.logoimg{
-    margin-left: 10px;
-    width: 120px;
-    height: 60px;
-    position: relative;
-    vertical-align: middle;
-}
-.search{
-    margin-left: 100px;
-    margin-top: 7px;
-    width: 700px;
-    height: 25px;
-}
-.searchbutton{
-    height: 30px;
-    margin-top: 7px;
-    width: 70px;
-}
-.searchimg{
-    width: 30px;
-}
-.main{
-    display: flex;
-    justify-content: space-around;
-    margin-left: 250px;
-}
-.col-1{
-  display: flex;
-  justify-content: space-around;
- 
-  margin-right: 3rem;
-  margin-bottom: 6rem;
-  width: 70px ;
-  height: 30px ;
-  margin-top: 30rem;
-  
-}
-.second-box{
-  margin-bottom: -5rem;
-
-  background-color: white;
-  font-size: 1.5rem;
-  text-align: center;
-}
-.apple{
-    height: 200px;
-    width: 350px;
-}
-
-
-.section{
-    display: flex;
-    flex-direction: column; 
-    margin-top: 50px;
-}
-.sec{
-    display: flex;
-    flex-direction: row;
-    
-}
-.sectxt{
-    margin-left: 10px;
-}
-.secimg{
-    width: 30px;
-    height: 25px;
-    margin-top: 5px;
-}
-</style>
-
-
-
-
-
-
-
-
-
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="youtube.css">
+    <title>youtube</title>
 </head>
 <body>
     <header>
-    <div id="high">
-        <div id="start">
-            <button class="guide-button">
-                <img class="guide-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png">
-            </button> 
-            <a class="logo" href="#"><img class="logoimg" src="https://lh3.googleusercontent.com/proxy/Id1NAw0LYQMIfZ7a-uHO_9yM6qx7Oh8IvFlmhD1IDvYLfE-RwyOQ_m0zWWbP72WMTwAnFJ2AuvrYLR0Ovdqx2pG2bpYOiyLuSPXd1wdPdQVarmJdYsIkLQ" ></a>
-            <div><input class="search" type="text"></div>
-            <button class="searchbutton"><img class="searchimg" src="https://imyeonn.github.io/assets/images/post/001/30_00title.png"></button>
-        </div>
+       <div class="logo">
+       <i class="fab fa-youtube"></i>
+       <span class="title">Youtube</span>
     </div>
-</header>
-
-<div class="section">
-    <div class="sec">
-    <img class="secimg" src="data:image/png;base64,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">
-    <h3 class="sectxt">홈</h3>
-        
-     <div class="sec">
-    <img class="secimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAclBMVEX///8AAACUlJTNzc3v7+8XFxdRUVFJSUmrq6vq6urd3d2ampr09PT8/Pz5+fnExMRXV1c7OzuEhIREREQqKioiIiJkZGRdXV1ra2upqam9vb02NjaJiYnW1tYoKCh0dHQPDw+3t7cbGxt8fHyfn584ODibFO7MAAAHHklEQVR4nO2d63raOhBFUWISQ7iEAqFAICFp3/8Vm+ZWJ57ZHtmyRqKzfp4v1FrgY22PxvJgEJFJuTm646acxDxoTLbug632UHphcuv+cXuGP2OxdlXWhfaAQjN+dF95HGsPKSyXrs6l9qBCMicEnZtrDyscJSnoXKk9sFDcMILO3WgPLQw/WEHnfmgPLgQPQNC5B+3hdWZ2CwVf5v6Z9hC7MVk2CDq3zDreFKtGQedWGcebWpChyTfeUEGGJtN4sxMLOrfTHmwbuCBDk2G84YMMTXbxBgUZmsziDQ4yNFnFm6YgQ7PRHraYyYK3WF2CELDIJN6MgMN1MSiugf9Ie/ASxmve4DVmozC+ziDeoCBz9/43d+Bvko83dEXmjX/zAZpLEq/eoCBTndNRHkg63vwSDxx9Fb+URi/g2ePkQ6fzs8roBaAgU7+AoEtSmvFmugFDpiaBMfj7zTT6+BuZgYrMmp7IR2DmXCZXoBodwWi5MIbqVMfE4s34iR8rqBeiePOUVLw58AP9DDI0KN4cIo1egCzI0GQRb6RBhiaDeNN1iN2+oAig00xWJERlxwSqNz/B8KR3Qije/Ox19M3MQJDxKNaj8v9Gde5vEWRoUo03BQgynlUlVL06qi1OoXPr1jc6T0G80VqcCn19CHHNCkqXIEOTWLzpY55OKt6gwbTvrdyCfzVyvLkHQ+my2onizX2w0Qvwq8j4kEb1BvbIdL2wo+pNrN4buLTUvfaAFnbiLE6hHplFiPRRoG8wQrwZD8FZFKYGiOLNsPd4E+dGRzHehA8yNGrxBgWZi6BHugBH6jHexExVKtWbvoIMjUK86S/I0ESPN30GGRoYb4Ifbbbnj9ZbjwiKN/vACW4EBJf95YwCVLr2Qb9X1CNz1Wccnl3xBw7Ze9N+aak7URanYgUZmgjxRnvlpPecoV8e6vkr7r601J1eF6diBxma/uKNd49MX/TVezNDyyVxu0FQN8ui9YyMQlP057FQ703b2Ih6ZK7id2VNQbxp13ujGWRoAscb3SBDEzTeaAcZmoDpAxWCNLftQItTXqWwFIIMTaB4k9x6c4UQJWnUIxM1yNDAeCOa+1GQ8eqR6QvUeyOJNzAepfHkFey9afwNgvbI9EWX3puUe+iqtL4W5vOYh8/DKxXiLS11p9XiVD89Mn3Rovcm7tJSd7wXp1BFJrVT9A10otarN+j+MkfD2j06mkTzNPwWT9DSUq6GXxanGveRydKwEm+a95HJ0/Az3gg2ysnV8E1x1Px3+Rq6v/8vSnbpyNfwFpdFz8DQHWBWOwfD+wGe6vM3XAxEW6plbPj4HxiCwtNZGB5hOeAcDJ9haeYcDOeDQW2hl6hjZWNYG/tqUI+lJZEBsjE8fC+mvQbTr9vm7Kgkno3h5bfqzftmPhXv44G818jIcHCozA6fZcXRRxXq4u/CRuaGg9nHf3+ormFM5+W2fF/t782wmJ/K7XZbnuZhem4ZwxcOLzZzfpWlD8PR6flrKWj/fOq8UscbNhDccHxDd/ssb7qtt6ZiuEMbXi+7FNPTMDyBBdtX1qfW/3YKhnPRft5te5n1DUdoHbPKz3YXHXVDUaZ/p9XPqG3ot1dym1Y5XcOJ71bCLd6PpGo4aVjqIdh7K2oajsDj0CxD3+uNouFEMknUWXn+inqG0+bXdtAs/VqS9AxRtzLGr7tazRBttduE1wa7WoaipR4Wn450LUP/eaLKPn1D3/dafMejTV7HsACDH27uy93lrrzfoOlSXuHQMeRvJx4q1ZlizndgyZs8VQzZpoDaDRJ/ayWONiqGzE+zJ3e7Zq5J4gcKNQyZn/COzipTJhpIf0QNQ7rnk9+ng24ikPayahiSgRSddeRZvRQeTcGQfNjjGn6EfCWLsIyqYEgl0ic8vxXUY5zCdKpgSHXhNj00R3XPX8kOp2BIDHbfdMs3peYM2eHiG1JNjs1Ve6ohXTbQ+IYnYqzNd+1T4lOySn98Q2J2k9y0E/O+bKer+IZEiVSytEScprJdoOIbEk2AkurZpP6xheh48Q2Jq6Loc/WPye70oxtOiSqp6ID1j61EZcXohpN6PJGdbfWz+0lUG45uWNRrE7JwUo9CQ1EpwwxZzJDDDFnMkMMMWcyQwwxZzJDDDFnMkMMMWcyQwwxZzJDDDFnMkMMMWcyQwwxZzJDDDFnMkMMMWcyQwwxZzJDDDFnMkMMMWcyQwwxZzJDDDFnMkMMMWcyQwwxZzJDDDFnMkMMMWcyQwwxZUjAUbeUwqz9vIXt+qf681JPo/WnEBhWtDVfXAojHnIeSz10Te0gsJZ8jntFpbZgNZmiG6WOGZpg+Zvi/GEpej5Qqss17ZtrD7IAoz8reAJUmsqRP72+RB+Kds39rj7Qlv6WC8NXXKeOxiX2eE4bXa99H6P3qabLx3Yb4cLFos92xDsPFBbvx6R8xfHwif0vKtgAAAABJRU5ErkJggg==">
-    <h3 class="sectxt">홈d</h3>
-</div>
-</div>
+       <div class="icon">
+        <i class="fas fa-search"></i>
+        <i class="fas fa-ellipsis-v"></i>
+       </div>   
+    </header>
+    <section class="player">
+        <video controls src="#"></video>   
+    </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="main">
-<div class="col-1">
-    <div class="second-box">
-    <button style="background-color: white;">
-        <img class="apple" src="https://cdn.icon-icons.com/icons2/38/PNG/512/like_favorite_heart_5759.png">
-        <h3>ㅇㅅㅇ</h3>
-    </button>
-    </div>
-</div>
-
-<div class="col-1">
-    <div class="second-box">
-    <button style="background-color: white;">
-        <img class="apple" src="https://cdn.icon-icons.com/icons2/38/PNG/512/like_favorite_heart_5759.png">
-        <h3>ㅇㅅㅇ</h3>
-    </button>
-    </div>
-</div>
-
-<div class="col-1">
-    <div class="second-box">
-    <button style="background-color: white;">
-        <img class="apple" src="https://cdn.icon-icons.com/icons2/38/PNG/512/like_favorite_heart_5759.png">
-        <h3>ㅇㅅㅇ</h3>
-    </button>
-    </div>
-</div>
-
-<div class="col-1">
-    <div class="second-box">
-    <button style="background-color: white;">
-        <img class="apple" src="https://cdn.icon-icons.com/icons2/38/PNG/512/like_favorite_heart_5759.png">
-        <h3>ㅇㅅㅇ</h3>
-    </button>
-    </div>
-</div>
-
-
-
-</div>
-
-<div class="main">
-    <div class="col-1">
-        <div class="second-box">
-        <button style="background-color: white;">
-            <img class="apple" src="https://cdn.icon-icons.com/icons2/38/PNG/512/like_favorite_heart_5759.png">
-            <h3>ㅇㅅㅇ</h3>
-        </button>
-        </div>
-    </div>
-    
-    <div class="col-1">
-        <div class="second-box">
-        <button style="background-color: white;">
-            <img class="apple" src="https://cdn.icon-icons.com/icons2/38/PNG/512/like_favorite_heart_5759.png">
-            <h3>ㅇㅅㅇ</h3>
-        </button>
-        </div>
-    </div>
-    
-    <div class="col-1">
-        <div class="second-box">
-        <button style="background-color: white;">
-            <img class="apple" src="https://cdn.icon-icons.com/icons2/38/PNG/512/like_favorite_heart_5759.png">
-            <h3>ㅇㅅㅇ</h3>
-        </button>
-        </div>
-    </div>
-    
-    <div class="col-1">
-        <div class="second-box">
-        <button style="background-color: white;">
-            <img class="apple" src="https://cdn.icon-icons.com/icons2/38/PNG/512/like_favorite_heart_5759.png">
-            <h3>ㅇㅅㅇ</h3>
-        </button>
-        </div>
-    </div>
-    
-    
-    
-    </div>
-
-    <div class="main">
-        <div class="col-1">
-            <div class="second-box">
-            <button style="background-color: white;">
-                <img class="apple" src="https://cdn.icon-icons.com/icons2/38/PNG/512/like_favorite_heart_5759.png">
-                <h3>ㅇㅅㅇ</h3>
+    <section class="info">
+        <div class="metadata">
+            <ul class="hashtags">
+                <li>#김지민바보</li>
+                <li>#홍정현바보</li>
+                <li>#정창용바보</li>
+            </ul>
+            <div class="titleandbutton">
+                <span class="title">
+                    대덕 소프트웨어 마이스터 고등학교
+                    1학년 4반 11번 롤티어 골드 2 윤민섭
+                </span>
+                <button class="morebtn">
+                <i class="fas fa-caret-down"></i>
             </button>
             </div>
-        </div>
-        
-        <div class="col-1">
-            <div class="second-box">
-            <button style="background-color: white;">
-                <img class="apple" src="https://cdn.icon-icons.com/icons2/38/PNG/512/like_favorite_heart_5759.png">
-                <h3>ㅇㅅㅇ</h3>
-            </button>
+            <div class="views">
+                <span class="views">1M views 1 month ago</span>
             </div>
         </div>
-        
-        <div class="col-1">
-            <div class="second-box">
-            <button style="background-color: white;">
-                <img class="apple" src="https://cdn.icon-icons.com/icons2/38/PNG/512/like_favorite_heart_5759.png">
-                <h3>ㅇㅅㅇ</h3>
-            </button>
-            </div>
-        </div>
-        
-        <div class="col-1">
-            <div class="second-box">
-            <button style="background-color: white;">
-                <img class="apple" src="https://cdn.icon-icons.com/icons2/38/PNG/512/like_favorite_heart_5759.png">
-                <h3>ㅇㅅㅇ</h3>
-            </button>
-            </div>
-        </div>
-        
-        
-        
-        </div>
-    
-
+        <div class="actions"></div>
+        <div class="channel"></div>
+    </section>
+    <section class="upnext"></section>
 </body>
 </html>
