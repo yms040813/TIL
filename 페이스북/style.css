@@ -1,3 +1,9 @@
+header{
+    display: flex;
+    position: fixed;
+    background-color: white;
+}
+
 .headerleft{
     display: flex;
 }
@@ -5,10 +11,18 @@
 .headermid{
     display: flex;
     justify-content: space-around;
+    margin-left: 20px;
+    margin-top: 0px;
+}
+
+.headerright{
+    display: flex;
 }
 
 .logo{
+    margin-left: 10px;
     width: 40px;
+    height: 40px;
     
 }
 #searchbar{
@@ -17,10 +31,12 @@
 }
 .search{
     width: 230px;
+    height: 40px;
     border-radius: 20px;
     background-color:#F0F2F5;
     border:none;border-right:0px; border-top:0px; border-left:0px; border-bottom:0px;
-    text-align: center;
+    padding-right: 10px;
+    text-align: left;
 }
 .searchimg{
     position: absolute;
@@ -28,4 +44,8 @@
     margin-top: 5px;
     width: 30px;
     height: 30px;
+    
+}
+.midimg{
+    margin-right: 15px;
 }
