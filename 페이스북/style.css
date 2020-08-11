@@ -2,6 +2,11 @@
     display: flex;
 }
 
+.headermid{
+    display: flex;
+    justify-content: space-around;
+}
+
 .logo{
     width: 40px;
     
