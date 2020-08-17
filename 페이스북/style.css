@@ -1,7 +1,12 @@
+
 header{
     display: flex;
     background-color: white;
     justify-content: space-between;
+}
+
+.main{
+    background-color: #F0F2F5;
 }
 
 .headerleft{
