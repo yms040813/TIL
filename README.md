@@ -239,7 +239,7 @@ position 속성은  태그의 위치를 정한다 (position:속성;left :값;top
 
 # 경계선
 
-`border` 속성은 태그의 테두리를 설정하는 속성으로, [background 속성](https://ofcourse.kr/css-course/background-%EC%86%8D%EC%84%B1)과 비슷하게 세부적인 속성들을 한번에 쓸 수 있는 속성입니다. **width - style - color**의 순서로 사용합니다.
+`border` 속성은 태그의 테두리를 설정하는 속성으로, [background 속성]과 비슷하게 세부적인 속성들을 한번에 쓸 수 있는 속성입니다. **width - style - color**의 순서로 사용합니다.
 
 ### **border-width**
 

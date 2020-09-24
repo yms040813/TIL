@@ -1,0 +1,3 @@
+function BMI(){
+ console.log
+};
