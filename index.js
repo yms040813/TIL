@@ -9,3 +9,5 @@ console.log(foo.nickname);
 
 delete foo;
 console.log(foo.name);
+
+console.log('log'-'l');
