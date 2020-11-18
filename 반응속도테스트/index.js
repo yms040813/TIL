@@ -42,6 +42,8 @@ const 상태 = {
   let a = 끝시간 - 시작시간;
   console.log('반응속도', a, 'ms');
   alert('당신의 반응속도는 ' + a +'ms입니다.');
+
+  
   
   시작시간 = null;
   끝시간 = null;
