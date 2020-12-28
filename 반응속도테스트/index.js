@@ -34,13 +34,17 @@ screen.addEventListener('click',function(){
   console.log('반응속도', a, 'ms');
   alert('당신의 반응속도는 ' + a +'ms입니다.');
 
-  
+  for(let i=0;i<5;i++){
+    
+  }
   
   start = null;
   end = null;
   screen.classList.remove('now');
   screen.classList.add('waiting');
   screen.textContent = '클릭해서 시작하세요';
+
+
 }
   
 });
